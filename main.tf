@@ -12,3 +12,6 @@ resource "ibm_cr_namespace" "test" {
 output "apikey"{
   value = var.ibmcloud_api_key
 }
+output "crn" {
+  value = ibm_cr_namespace.test
+  }
