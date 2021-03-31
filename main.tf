@@ -1,17 +1,12 @@
-variable "ibmcloud_api_key"{}
-
-provider "ibm" {
-ibmcloud_api_key=var.ibmcloud_api_key
+terraform {
+  required_providers {
+    ibm = {
+      source = "IBM-Cloud/ibm"
+      version = "1.22.0"
+    }
+  }
 }
-
 
 resource "ibm_cr_namespace" "test" {
   name = "test-12312"
-  }
-
-output "apikey"{
-  value = var.ibmcloud_api_key
-}
-output "crn" {
-  value = ibm_cr_namespace.test
   }
