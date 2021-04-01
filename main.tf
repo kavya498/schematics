@@ -7,7 +7,7 @@ terraform {
   }
 }
 provider "ibm"{
-  region= "us-east"
+  region= "eu-gb"
 }
 resource "ibm_is_vpc" "testvpc" {
   name = "testvpc"
